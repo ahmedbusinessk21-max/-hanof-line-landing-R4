@@ -314,7 +314,7 @@
   <section class="order-section" id="order">
     <div class="container">
       <h2>اختاري مقاسك وأكملي طلبك</h2>
-      <p class="sub">حددي مقاسك من تحت عشان تقدرين تكملين الطلب</p>
+      <p class="sub">حددي مقاسك حتي تقدرين تكملين الطلب</p>
       <div class="size-grid">
         <button type="button" class="size-btn" data-size="50">50</button>
         <button type="button" class="size-btn" data-size="52">52</button>
@@ -404,15 +404,14 @@
 
 <script>
   /* ==========================================================
-     مكان اللينكات: استبدلي القيم تحت بلينك الدفع الخاص بكل مقاس
      ========================================================== */
   var sizeLinks = {
-    "50": "REPLACE_LINK_50",
-    "52": "REPLACE_LINK_52",
-    "54": "REPLACE_LINK_54",
-    "56": "REPLACE_LINK_56",
-    "58": "REPLACE_LINK_58",
-    "60": "REPLACE_LINK_60"
+    "50": "https://hanof-line.com/payment/p1648571732?quantity=1&options%5B1840702695%5D=706626520",
+    "52": "https://hanof-line.com/payment/p1648571732?quantity=1&options%5B1840702695%5D=133915353",
+    "54": "https://hanof-line.com/payment/p1648571732?quantity=1&options%5B1840702695%5D=1371636186",
+    "56": "https://hanof-line.com/payment/p1648571732?quantity=1&options%5B1840702695%5D=598647003",
+    "58": "https://hanof-line.com/payment/p1648571732?quantity=1&options%5B1840702695%5D=2106314532",
+    "60": "https://hanof-line.com/payment/p1648571732?quantity=1&options%5B1840702695%5D=1330703909"
   };
 
   var selectedSize = null;
@@ -437,7 +436,7 @@
   cta.addEventListener('click', function(e){
     if(!selectedSize){
       e.preventDefault();
-      hint.textContent = 'اختاري المقاس أول عشان تكملين الطلب';
+      hint.textContent = 'اختاري المقاس أول حتي تكملين الطلب';
       hint.classList.add('err', 'shake');
       document.querySelector('.size-grid').scrollIntoView({behavior:'smooth', block:'center'});
       setTimeout(function(){ hint.classList.remove('shake'); }, 400);
